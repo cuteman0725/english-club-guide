@@ -1,0 +1,76 @@
+
+:root {
+  color-scheme: light;
+  --page: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #ffffff;
+  --text: #000000;
+  --muted: #333333;
+  --border: #999999;
+  --accent: #000000;
+  --accent-text: #ffffff;
+}
+
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-size: 11pt;
+}
+
+.site-shell {
+  width: 100%;
+  padding: 0;
+}
+
+.topic-nav,
+.tab-list,
+.question-toolbar,
+.question-controls,
+.timer-panel,
+dialog,
+.image-button span {
+  display: none !important;
+}
+
+.tab-panel,
+.tab-panel[hidden] {
+  display: block !important;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#questionText {
+  display: none !important;
+}
+
+#allQuestions,
+#allQuestions[hidden] {
+  display: block !important;
+}
+
+.image-button {
+  display: block;
+}
+
+.image-button img {
+  max-height: 210mm;
+  object-fit: contain;
+  break-inside: avoid;
+}
+
+.fact-note,
+#allQuestions li {
+  break-inside: avoid;
+}
+
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  overflow-wrap: anywhere;
+}

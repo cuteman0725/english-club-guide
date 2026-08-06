@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light;
+  --page: #f4f7fb;
+  --surface: #ffffff;
+  --surface-soft: #eaf1fb;
+  --text: #172033;
+  --muted: #596579;
+  --border: #cbd5e1;
+  --accent: #225aa8;
+  --accent-text: #ffffff;
+  --danger: #9f2d2d;
+  --radius: 1rem;
+  --content-width: 72rem;
+  --reading-width: 48rem;
+  --touch-target: 2.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0f172a;
+    --surface: #1e293b;
+    --surface-soft: #243957;
+    --text: #f8fafc;
+    --muted: #c0cad9;
+    --border: #475569;
+    --accent: #9bc2ff;
+    --accent-text: #10213e;
+    --danger: #ff9c9c;
+  }
+}
