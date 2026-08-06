@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="English Club discussion topic guide.">
+  <title>Session I: Senior Driver License Renewal</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script defer src="js/mode.js"></script>
+  <script defer src="js/content.js"></script>
+  <script defer src="js/question-navigator.js"></script>
+  <script defer src="js/timer.js"></script>
+  <script defer src="js/image-dialog.js"></script>
+  <script defer src="js/topic-page.js"></script>
+</head>
+<body data-topic-id="senior-driving">
+  <main class="site-shell">
+    <nav class="topic-nav" aria-label="Topic navigation">
+      <a id="homeLink" class="button-link" href="index.html?mode=participant">← Home／首頁</a>
+      <label class="mode-control" for="topicMode">
+        Mode／模式
+        <select id="topicMode">
+          <option value="participant">Participant／參加者</option>
+          <option value="host">Host／主持人</option>
+        </select>
+      </label>
+    </nav>
+
+    <header class="topic-header">
+      <p id="topicSession"></p>
+      <h1 id="topicTitle"></h1>
+      <p id="topicSubtitle"></p>
+    </header>
+
+    <nav class="tab-list" aria-label="Topic sections">
+      <button type="button" class="tab-button is-active" data-tab-target="articlePanel" aria-controls="articlePanel" aria-selected="true">Article／文章</button>
+      <button type="button" class="tab-button" data-tab-target="visualPanel" aria-controls="visualPanel" aria-selected="false">Visual Summary／圖解</button>
+      <button type="button" class="tab-button" data-tab-target="questionsPanel" aria-controls="questionsPanel" aria-selected="false">Questions／問題</button>
+    </nav>
+
+    <section id="articlePanel" class="tab-panel reading-panel">
+      <div id="articleBody"></div>
+      <aside class="fact-note">
+        <strong>Important note:</strong>
+        <span id="factNote"></span>
+      </aside>
+      <div class="source-links">
+        <a id="sourceLink" class="button-link" href="#" target="_blank" rel="noopener"></a>
+        <a id="backgroundSourceLink" class="button-link" href="#" target="_blank" rel="noopener" hidden></a>
+      </div>
+    </section>
+
+    <section id="visualPanel" class="tab-panel" hidden>
+      <button id="visualOpenButton" class="image-button" type="button">
+        <img id="visualImage" src="" alt="">
+        <span>Tap to enlarge／點一下放大</span>
+      </button>
+      <p id="visualDisclosure" class="disclosure"></p>
+    </section>
+
+    <section id="questionsPanel" class="tab-panel" hidden>
+      <div id="questionsRoot"></div>
+      <div id="timerRoot" hidden></div>
+    </section>
+  </main>
+
+  <dialog id="imageDialog">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="Close enlarged image">Close／關閉</button>
+    </form>
+    <img id="dialogImage" src="" alt="">
+  </dialog>
+</body>
+</html>

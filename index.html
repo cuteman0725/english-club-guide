@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A mobile-friendly English Club discussion guide.">
+  <title>English Club Discussion Guide</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script defer src="js/mode.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modeSelect = document.querySelector("#homeMode");
+      const seniorLink = document.querySelector("#topicSeniorDriving");
+      const tourismLink = document.querySelector("#topicMassTourism");
+
+      function updateLinks() {
+        seniorLink.href = ClubMode.withMode("topic-senior-driving.html", modeSelect.value);
+        tourismLink.href = ClubMode.withMode("topic-mass-tourism.html", modeSelect.value);
+      }
+
+      modeSelect.value = ClubMode.parse(window.location.search);
+      modeSelect.addEventListener("change", updateLinks);
+      updateLinks();
+    });
+  </script>
+</head>
+<body>
+  <main class="site-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">English Club／英文俱樂部</p>
+        <h1>Choose a discussion topic</h1>
+      </div>
+      <label class="mode-control" for="homeMode">
+        Mode／模式
+        <select id="homeMode">
+          <option value="participant">Participant／參加者</option>
+          <option value="host">Host／主持人</option>
+        </select>
+      </label>
+    </header>
+
+    <section class="topic-grid" aria-label="Discussion topics">
+      <a id="topicSeniorDriving" class="topic-card" href="topic-senior-driving.html?mode=participant">
+        <span class="topic-card__session">Session I</span>
+        <h2>Senior Driver License Renewal</h2>
+        <p>Should older drivers face stricter license renewal requirements?</p>
+        <span class="topic-card__action">Open topic／開啟主題 →</span>
+      </a>
+
+      <a id="topicMassTourism" class="topic-card" href="topic-mass-tourism.html?mode=participant">
+        <span class="topic-card__session">Session II</span>
+        <h2>Mass Tourism in Mallorca</h2>
+        <p>Is mass tourism destroying the places we love?</p>
+        <span class="topic-card__action">Open topic／開啟主題 →</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

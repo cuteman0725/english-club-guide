@@ -1,0 +1,10 @@
+.worktrees/
+.superpowers/
+node_modules/
+dist/
+playwright-report/
+test-results/
+
+__pycache__/
+.pytest_cache/
+*.py[cod]
